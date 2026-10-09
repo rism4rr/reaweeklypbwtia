@@ -1,21 +1,27 @@
+
 @extends('layouts.main')
 
 @section('content')
 
-<h1>HALAMAN BERITA</h1>
+<h1 class="mb-4">Daftar Berita</h1>
 
-<h2> KHW NUSANTARA 3576</h2>
+@foreach ($beritas as $berita)
+    <div class="card mb-3">
+        <div class="card-body">
+            <h2>
+                <a href="/berita/{{ $berita->slug }}"
+                   class="text-decoration-none">
+                    {{ $berita->judul }}
+                </a>
+            </h2>
 
-<p>
-    Halo wak, Assalamualaikum. Balik lagi sama cerita kali ini.
-    Kali ini kita bakal membahas sebuah kisah yang cukup bikin penasaran.
-    Cerita ini berawal dari sebuah kejadian yang tidak biasa dan membuat
-    orang-orang di sekitarnya bertanya-tanya tentang apa yang sebenarnya terjadi.
-</p>
+            <h5 class="text-muted">
+                Penulis: {{ $berita->penulis }}
+            </h5>
 
-<p>
-    Semakin cerita ini berlanjut, semakin banyak hal menarik yang terungkap.
-    Daripada makin penasaran, yuk kita simak ceritanya sampai selesai.
-</p>
+            <p>{{ $berita->isi }}</p>
+        </div>
+    </div>
+@endforeach
 
 @endsection
