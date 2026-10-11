@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web TI</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -66,9 +65,10 @@
     </nav>
 
     <div class="container mt-4">
-        <h1> hii ini rismaa
-            
-        </h1> 
+        <h1>
+            hii ini rismaa
+        </h1>
+
         @yield('content')
     </div>
 
@@ -77,4 +77,3 @@
         crossorigin="anonymous"></script>
 
 </body>
-</html>
